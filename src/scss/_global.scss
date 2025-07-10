@@ -1,0 +1,142 @@
+$white: #ffffff;
+$black: #000000;
+$green: #85c226;
+$yellow: #e2c24d;
+$orange: #e38635;
+$red: #c81e78;
+$grey: #f3f3f3;
+
+body {
+  background-color: $white;
+  @extend %regular;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $black;
+}
+
+html,body{
+height: 100%;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.wrapper  {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+a {
+  @extend %semibold;
+  color: $black;
+  font-size: 16px;
+}
+
+.section  {
+  padding: 130px;
+}
+
+.sub-title {
+  margin-bottom: 80px;
+  font-size: 40px;
+  @extend %bold;
+}
+
+.btn{
+  padding: 10px 20px 11px 20px;
+  min-width: 100px;
+  background-color: white;
+  color: black;
+  border: 5px dotted black;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+
+button{
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+//кнопка промотки
+.btn-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+//шрифты
+%regular {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%medium {
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-weight: 600;
+}
+
+%semibold {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%bold {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Montserrat-Regular'),
+    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Montserrat-Medium'),
+    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Montserrat-SemiBold'),
+    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Montserrat-Bold'),
+    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff');
+  font-display: swap;
+}
