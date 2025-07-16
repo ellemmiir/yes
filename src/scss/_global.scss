@@ -15,7 +15,7 @@ body {
 }
 
 html,body{
-height: 100%;
+  height: 100%;
 }
 
 main{
@@ -33,6 +33,12 @@ main{
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+}
+
+.container-sec{
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1400px;
 }
 
 a {
