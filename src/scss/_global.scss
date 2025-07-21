@@ -4,7 +4,9 @@ $green: #85c226;
 $yellow: #e2c24d;
 $orange: #e38635;
 $red: #c81e78;
-$grey: #f3f3f3;
+// $grey: #f3f3f3;
+$grey: #f2f3f4;
+$darkgrey: #202020;
 
 body {
   background-color: $white;
@@ -58,13 +60,16 @@ a {
 }
 
 .btn{
-  padding: 10px 20px 11px 20px;
   min-width: 100px;
-  background-color: white;
   color: black;
-  border: 5px dotted black;
   transition: all .3s;
   cursor: pointer;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
 }
 
 
