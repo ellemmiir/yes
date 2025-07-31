@@ -83,26 +83,33 @@ function pages () {
 
 
 function styles () {
-    return src(path.src.css, {base: srcPath + 'scss/'})
-    .pipe(plumber({
-      errorHandler : function (err) {
-        notify.onError({
-          title: "SCSS Error",
-          message: "Error <%- error.message %>"
-        })(err);
-        this.emit('end');
+    return src(
+      [path.src.css, "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css"],
+      {
+        base: srcPath + "scss/",
       }
-    }))
-    .pipe(concat('style.css'))
-    .pipe(scss())
-    .pipe(autoPrefixer())
-    .pipe(cssbeautify())
-    .pipe(dest(path.build.css)) 
-    .pipe(scss({outputStyle: 'compressed'}))
-    .pipe(removeComments())
-    .pipe(concat('style.min.css'))
-    .pipe(dest(path.build.css)) 
-    .pipe(browserSync.stream())
+    )
+      .pipe(
+        plumber({
+          errorHandler: function (err) {
+            notify.onError({
+              title: "SCSS Error",
+              message: "Error <%- error.message %>",
+            })(err);
+            this.emit("end");
+          },
+        })
+      )
+      .pipe(concat("style.css"))
+      .pipe(scss())
+      .pipe(autoPrefixer())
+      .pipe(cssbeautify())
+      .pipe(dest(path.build.css))
+      .pipe(scss({ outputStyle: "compressed" }))
+      .pipe(removeComments())
+      .pipe(concat("style.min.css"))
+      .pipe(dest(path.build.css))
+      .pipe(browserSync.stream());
 }
 
 
@@ -110,6 +117,7 @@ function scripts () {
  return src(
    [
      "node_modules/jquery/dist/jquery.js",
+     "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
      path.src.js,
    ],
    { base: srcPath + "js/" }

@@ -174,12 +174,21 @@ document.addEventListener("DOMContentLoaded", () => {
       photoSources
         .slice(currentIndex, currentIndex + photosPerPage)
         .forEach((src) => {
+          // Создаём <a>
+          const link = document.createElement("a");
+          link.href = src;
+          link.setAttribute("data-fancybox", "gallery");
+
+          // Создаём <img>
           const img = document.createElement("img");
           img.src = src;
           img.alt = "Фото галереи";
           img.loading = "lazy";
           img.classList.add("photos__item");
-          galleryContainer.appendChild(img);
+
+          // Вкладываем <img> в <a>, и <a> в контейнер
+          link.appendChild(img);
+          galleryContainer.appendChild(link);
         });
 
       currentIndex += photosPerPage;
@@ -191,5 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadMoreBtn.addEventListener("click", loadPhotos);
     loadPhotos();
+  })();
+
+  (() => {
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
   })();
 });
