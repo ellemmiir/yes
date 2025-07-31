@@ -1,160 +1,195 @@
-//swiper
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    autoHeight: true,
-    freeMode: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    mousewheel: true,
-    keyboard: true,
-  });
-});
+document.addEventListener("DOMContentLoaded", () => {
 
-
-//animation
-// const svgContainer = document.getElementById('svgAnimationContainer');
-// const animItem = bodymovin.loadAnimation({
-//   wrapper: svgContainer,
-//   animType: 'svg',
-//   loop: true,
-//   path: 'images/stickers.json'
-// });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const galleryContainer = document.getElementById("galleryContainer");
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
-
-  // Массив путей к фото
-  const photoSources = [
-    "images/photos/1.jpg",
-    "images/photos/2.jpg",
-    "images/photos/3.jpg",
-    "images/photos/4.jpg",
-    "images/photos/5.jpg",
-    "images/photos/6.jpg",
-    "images/photos/7.jpg",
-    "images/photos/8.jpg",
-    "images/photos/9.jpg",
-    "images/photos/10.jpg",
-    "images/photos/11.jpg",
-    "images/photos/12.jpg",
-    "images/photos/13.jpg",
-    "images/photos/14.jpg",
-    "images/photos/15.jpg",
-    "images/photos/16.jpg",
-    "images/photos/17.jpg",
-    "images/photos/18.jpg",
-    "images/photos/19.jpg",
-    "images/photos/20.jpg",
-    "images/photos/21.jpg",
-  ];
-
-  let photosPerPage = 9;
-  let currentIndex = 0;
-
-  function loadPhotos() {
-    const slice = photoSources.slice(
-      currentIndex,
-      currentIndex + photosPerPage
-    );
-    slice.forEach((src) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "Фото галереи";
-      img.loading = "lazy";
-      img.classList.add("photos__item");
-      galleryContainer.appendChild(img);
+  //Swiper
+  // (() => {
+    const swiper = new Swiper(".mySwiper", {
+      // slidesPerView: 3,
+      spaceBetween: 20,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        767: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
     });
+  // })();
 
-    currentIndex += photosPerPage;
+  //Menu btn
+  (() => {
+    const menuBtn = document.querySelector(".menu__btn");
+    const menuList = document.querySelector(".menu__list");
 
-    if (currentIndex >= photoSources.length) {
-      loadMoreBtn.style.display = "none"; 
-    }
-  }
-
-  loadMoreBtn.addEventListener("click", loadPhotos);
-
-  loadPhotos();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const svgContainer = document.getElementById("svgAnimationContainer");
-  const animItem = bodymovin.loadAnimation({
-    container: svgContainer,
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "images/stickers.json",
-  });
-});
-
-
-//tabs
-const filterTabs = document.querySelector(".services__tabs");
-const filterButtons = document.querySelectorAll(".services__tab-btn");
-const contents = document.querySelectorAll(".services__tab-content");
-
-filterTabs.addEventListener("click", (event) => {
-  const root = document.documentElement;
-
-  if (event.target.classList.contains("services__tab-btn")) {
-    const targetTranslateValue = event.target.dataset.translateValue;
-    const contentId = event.target.dataset.content;
-
-    root.style.setProperty("--translate-filters-slider", targetTranslateValue);
-    handleActiveTab(filterButtons, event, "services-active");
-    switchTabContent(contentId);
-  }
-});
-
-const handleActiveTab = (tabs, event, className) => {
-  tabs.forEach((tab) => {
-    tab.classList.remove(className);
-  });
-
-  if (!event.target.classList.contains(className)) {
-    event.target.classList.add(className);
-  }
-};
-
-const switchTabContent = (id) => {
-  contents.forEach((content) => {
-    if (content.dataset.content === id) {
-      content.classList.add("active");
-    } else {
-      content.classList.remove("active");
-    }
-  });
-};
-
-
-//btn
-const btnUp = {
-  el: document.querySelector(".btn-up"),
-  show() {
-    this.el.classList.remove("btn-up_hide");
-  },
-  hide() {
-    this.el.classList.add("btn-up_hide");
-  },
-  addEventListener() {
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      scrollY > 400 ? this.show() : this.hide();
-    });
-    document.querySelector(".btn-up").onclick = () => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
+    if (menuBtn && menuList) {
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        menuList.classList.toggle("active");
       });
-    };
-  },
-};
+    }
+  })();
 
-btnUp.addEventListener();
+
+  //Main page svg
+  (() => {
+    const svgContainer = document.getElementById("svgAnimationContainer");
+    if (svgContainer) {
+      bodymovin.loadAnimation({
+        container: svgContainer,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "images/stickers.json",
+      });
+    }
+  })();
+
+
+  //Btn up
+  (() => {
+    const el = document.querySelector(".btn-up");
+    if (!el) return;
+
+    const show = () => el.classList.remove("btn-up_hide");
+    const hide = () => el.classList.add("btn-up_hide");
+
+    window.addEventListener("scroll", () => {
+      window.scrollY > 400 ? show() : hide();
+    });
+
+    el.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+
+
+  // Desktop (Programs)
+  function initDesktopTabs() {
+    const filterTabs = document.querySelector(".programs__tabs");
+    const filterButtons = document.querySelectorAll(".programs__tab-btn");
+    const contents = document.querySelectorAll(".programs__tab-content");
+    const tabColors = ["#cdf195", "#feffa5", "#ffd093", "#ef89c3"];
+
+    if (!filterTabs || getComputedStyle(filterTabs).display === "none") return;
+
+    filterTabs.addEventListener("click", (event) => {
+      if (event.target.classList.contains("programs__tab-btn")) {
+        const target = event.target;
+        const contentId = target.dataset.content;
+        const targetTranslateValue = target.dataset.translateValue;
+        const tabIndex = [...filterButtons].indexOf(target);
+
+        if (tabIndex !== -1) {
+          filterTabs.style.backgroundColor = tabColors[tabIndex];
+        }
+
+        document.documentElement.style.setProperty(
+          "--translate-filters-slider",
+          targetTranslateValue
+        );
+
+        filterButtons.forEach((btn) => btn.classList.remove("programs-active"));
+        target.classList.add("programs-active");
+
+        contents.forEach((content) => {
+          content.classList.toggle(
+            "active",
+            content.dataset.content === contentId
+          );
+        });
+      }
+    });
+  }
+
+  // Mobile tabs (Programs)
+  function initMobileTabs() {
+    const tabButtons = document.querySelectorAll(".programs-a__tab-btn");
+    const tabContents = document.querySelectorAll(".programs-a__tab-content");
+
+    if (
+      !tabButtons.length ||
+      getComputedStyle(tabButtons[0]).display === "none"
+    )
+      return;
+
+    let activeTabId = null;
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const contentId = btn.dataset.content;
+        const contentBlock = document.querySelector(
+          `.programs-a__tab-content[data-content="${contentId}"]`
+        );
+
+        const isActive = activeTabId === contentId;
+
+        if (isActive) {
+          btn.classList.remove("active");
+          contentBlock.classList.remove("active");
+          activeTabId = null;
+          return;
+        }
+
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        tabContents.forEach((c) => c.classList.remove("active"));
+
+        btn.classList.add("active");
+        contentBlock.classList.add("active");
+
+        activeTabId = contentId;
+      });
+    });
+  }
+
+    initDesktopTabs();
+    initMobileTabs();
+
+
+  //Gallery
+  (() => {
+    const galleryContainer = document.getElementById("galleryContainer");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+    if (!galleryContainer || !loadMoreBtn) return;
+
+    const photoSources = Array.from(
+      { length: 21 },
+      (_, i) => `images/photos/${i + 1}.jpg`
+    );
+    const photosPerPage = 9;
+    let currentIndex = 0;
+
+    function loadPhotos() {
+      photoSources
+        .slice(currentIndex, currentIndex + photosPerPage)
+        .forEach((src) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = "Фото галереи";
+          img.loading = "lazy";
+          img.classList.add("photos__item");
+          galleryContainer.appendChild(img);
+        });
+
+      currentIndex += photosPerPage;
+
+      if (currentIndex >= photoSources.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    }
+
+    loadMoreBtn.addEventListener("click", loadPhotos);
+    loadPhotos();
+  })();
+});

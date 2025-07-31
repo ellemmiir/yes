@@ -4,7 +4,6 @@ $green: #85c226;
 $yellow: #e2c24d;
 $orange: #e38635;
 $red: #c81e78;
-// $grey: #f3f3f3;
 $grey: #f2f3f4;
 $darkgrey: #202020;
 
@@ -50,26 +49,28 @@ a {
 }
 
 .section  {
-  padding: 130px;
+  padding: 130px 0;
 }
 
 .sub-title {
   margin-bottom: 80px;
-  font-size: 40px;
+  font-size: 60px;
   @extend %bold;
 }
 
 .btn{
   min-width: 100px;
-  color: black;
   transition: all .3s;
   cursor: pointer;
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #333;
+  background-color: #1c1c1c;
   color: white;
   border: none;
   border-radius: 6px;
+  &:hover{
+    color: #aaaaaa;
+  }
 }
 
 
@@ -82,8 +83,8 @@ button{
 //кнопка промотки
 .btn-up {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 17px;
+  bottom: 24px;
   cursor: pointer;
 }
 

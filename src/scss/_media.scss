@@ -1,0 +1,430 @@
+$maxWidth: 1200;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+
+    @media (min-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+}
+
+// @include adaptiv-font(120, 50);
+
+
+@media (max-width: 1600px) {
+  .header{
+    #svgAnimationContainer{
+      max-width: 700px;
+    }
+  }
+
+  .about{
+    &__top{
+      padding: 0 50px;
+    }
+  }
+
+  .program{
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .gallery{
+    &__inner{
+      &::after{
+        display: none;
+      }
+    }
+  }
+}
+
+
+/* Large desktops and laptops */
+/* Portrait tablets and medium desktops */
+@media (max-width: 1200px) {
+
+  .btn-up {
+    display: none;
+  }
+
+  .section  {
+    padding: 60px 0;
+  }
+
+  .sub-title {
+    margin-bottom: 30px;
+    @include adaptiv-font(60, 30);
+  }
+
+
+  .header{
+    #svgAnimationContainer{
+      display: none;
+    }
+    &__bottom-inner{
+      padding-top: 50px;
+      height: 500px;
+      text-align: center;
+    }
+    &__bottom-box{
+      width: 100%;
+    }
+    &__bottom-title {
+      margin-bottom: 30px;
+      @include adaptiv-font(60, 28);
+    }
+    &__bottom-subtitle {
+      @include adaptiv-font(22, 14);
+    }
+  }
+
+
+  .about{
+    &__top{
+      flex-direction: column;
+    }
+    &__title-box{
+      margin: 0 auto;
+    }
+    &__top-box{
+      padding-left: 0;
+      p{
+        max-width: fit-content;
+        text-align: center;
+      }
+    }
+    &__bottom{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+    .one:after,
+    .star:after,
+    .two:after,
+    .three:after {
+      display: none;
+    }
+  }
+  
+
+  .program{
+    &__link{
+      &::after{
+        display: none;
+      }
+    }
+  }
+
+
+  .gallery{
+    &__item{
+      height: 350px;
+    }
+  }
+
+  .contact{
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &__box{
+      justify-content: left;
+      width: 100%;
+    }
+  }
+
+
+  .photos,
+  .programs{
+    margin-top: 30px;
+  }
+}
+
+
+/* Portrait tablets and small desktops */
+@media (max-width: 991px) {
+
+  .about {
+    &__top{
+      padding: 0;
+    }
+    &__title-box{
+      text-align: center;
+      padding-left: 0;
+    }
+    &__icon{
+      display: none;
+    }
+    &__item-li:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+
+
+  .footer{
+    padding: 20px;
+    .logo{
+      display: none;
+    }
+    &__top{
+      flex-direction: column;
+      text-align: center;
+    }
+    &__menu{
+      width: 100%;
+    }
+    &__menu-list{
+      margin-bottom: 20px;
+      flex-direction: column;
+      padding: 0;
+    }
+    &__menu-li{
+      margin: 0 !important;
+      padding: 0;
+    }
+    &__menu-a{
+      display: inline-block;
+      padding: 10px;
+      width: 100%;
+    }
+    &__bottom{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__bottom-box{
+      margin-bottom: 10px;
+      order: -1;
+    }
+    &__bottom-link{
+      margin-bottom: 10px;
+      padding: 10px 0;
+    }
+  }
+
+
+  //separate page
+  .photos{
+    &__box{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+  .btn{
+    &:hover{
+      color: $white;
+    }
+  }
+
+
+  .header {
+    &__top-inner{
+      padding: 15px 0;
+    }
+    &__logo{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      z-index: 2;
+      object-fit: contain;
+    }
+    &__tel{
+      &:hover{
+        color: $black;   
+        svg path{
+          stroke: $black;
+        }
+      }
+    }
+  }
+
+
+  .menu {
+    order: 1;
+    &__btn {
+      display: block;
+    }
+    &__list {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $grey;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .3s ease-in-out;
+    }
+    &__list.active {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    &__list-li:not(:last-child) {
+      margin-right: 0;
+    }
+    &__list-a {
+      display: block;
+      padding: 15px 0;
+      font-size: 24px;
+    }
+    &__list-a:hover:after{
+      width: 0%;
+    }
+  }
+
+
+  .program{
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      padding: 10px;
+    }
+    &__box {
+      padding: 10px;
+    }
+    &__item-for{
+      margin-bottom: 5px;
+      font-size: 12px;
+    } 
+    &__item-title{
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
+  }
+
+  //separate page
+  //programs - desktop tabs
+  .programs{
+    &__wrapper{
+      display: none;
+    }
+  }
+
+  //programs - apadtive tabs
+  .programs-a{
+    &__tabs{
+      display: flex;
+    }
+  }
+
+
+  .gallery{
+    position: relative;
+    &__btn{
+      position: absolute;
+      transform: translate(50%, 50%);
+      top: 80%;
+      right: 50%;
+    }
+    &__title{
+      margin: 0 auto 30px;
+    }
+  }
+
+  //separate page
+  .photos{
+    &__box{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
+  .contact{
+    &__adress-ul{
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    &__adress-li:last-child{
+      margin-top: 5px;
+    }
+    &__tel{
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 35px;
+      min-width: 200px;
+      font-size: 18px;
+      &::before {
+        content: " ";
+        position: absolute;
+        background-image: url(../images/tel.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+      }
+    }
+    &__link {
+        color: $green;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    &__vk{
+      margin-bottom: 30px;
+      position: relative;
+      padding-left: 40px;
+      min-width: 200px;
+      font-size: 18px;
+      &::before {
+        content: " ";
+        position: absolute;
+        background-image: url(../images/envelope.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+      }
+    }
+    &__img-box{
+      display: block;
+    }
+    iframe{
+      display: none;
+    }
+    &__span{
+      margin-bottom: 10px;
+    }
+  }
+
+
+  .footer{
+    &__menu-a:hover:after{
+      width: 0%;
+    }
+  } 
+}
+
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .header{
+    &__tel{
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}

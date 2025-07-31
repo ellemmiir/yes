@@ -21,36 +21,25 @@
           <img class="header__logo" src="images/logo.jpg" alt="Логотип" />
         </a>
         <nav class="menu">
-          <button class="menu__btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="18"
-              viewBox="0 0 30 18"
-              fill="none"
-            >
-              <path d="M0 0H30V2H0V0Z" fill="black"></path>
-              <path d="M0 8H30V10H0V8Z" fill="black"></path>
-              <rect y="16" width="30" height="2" fill="black"></rect>
-            </svg>
-          </button>
+          <button class="menu__btn" id="menu__btn"></button>
           <ul class="menu__list">
             <li class="menu__list-li">
               <a class="menu__list-a" href="index.html"> Главная </a>
             </li>
             <li class="menu__list-li">
-              <a class="menu__list-a" href="services.html"> Программы </a>
+              <a class="menu__list-a" href="programs.html"> Программы</a>
             </li>
             <li class="menu__list-li">
               <a class="menu__list-a" href="photos.html"> Галерея </a>
             </li>
           </ul>
         </nav>
-        <a
-          class="header__tel"
-          href="tel:+79591429878"
-          rel="noopener noreferrer"
-        >
+        <a class="header__tel" href="tel:+79591429878" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <path
+              d="M3.75 6.875c0 10.7 8.676 19.375 19.375 19.375.484 0 .96-.02 1.434-.05.546-.044.816-.063 1.066-.204.203-.117.398-.328.5-.543.125-.254.125-.555.125-1.156v-3.52c0-.507 0-.757-.082-.976a1.287 1.287 0 00-.348-.492c-.175-.153-.414-.239-.886-.414l-4.008-1.458c-.551-.199-.828-.3-1.09-.28-.23.011-.453.093-.64.226-.216.152-.368.402-.669.906L17.5 20a15.126 15.126 0 01-7.5-7.5l1.71-1.027c.505-.301.755-.453.907-.668.133-.188.215-.41.227-.64.02-.263-.082-.54-.281-1.09l-1.458-4.009c-.175-.472-.261-.71-.414-.886a1.287 1.287 0 00-.492-.348c-.219-.082-.469-.082-.976-.082h-3.52c-.601 0-.902 0-1.156.125a1.316 1.316 0 00-.543.5c-.14.25-.16.52-.203 1.066-.031.473-.051.95-.051 1.434zm0 0"
+              fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
           <span class="header__tel-span">+7&nbsp;(959)&nbsp;142-98-78</span>
         </a>
       </div>
@@ -74,199 +63,228 @@
   </div>
 </header>
 
-
 <main>
   <section class="section about">
-    <!-- <div class="about__inner"> -->
-        <div class="container">
-          <div class="about__top">
-          <h2 class="sub-title about__title">О нас</h2>
+    <div class="about__inner">
+      <div class="container">
+        <div class="about__top">
+          <div class="about__title-box">
+            <svg class="about__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 225">
+              <path
+                d="M199.523 161.605h2.489l1.394 2.145.996-.898 2.813 1.578.32 2.078 1.465-.832 1.668 3.457-1.055.355v1.614c-1.863.64-3.277 2.253-5.386 1.703-.125 1.43-1.434 1.902-2.262 2.086-1.973.437-3.625 1.992-5.477 2.023-2.164.043-3.804 1.23-5.687 1.77-2.258.644-4.586 1.336-6.824 2.199-2.188.844-4.485 1.945-6.993 1.863-3.964 2.3-8.57 2.563-12.84 3.871-3.328 1.02-6.683 2.29-10.269 2.551-1.25.09-2.438 1.383-3.738-.523-.946 1.73-2.059 2.687-3.918 2.625-1.34 0-2.668.23-3.93.68-3.281 1.085-6.703 1.429-10.059 2.12-3.078.633-6.25.852-9.265 1.52-4.07.898-8.07.27-12.086.527-.707.047-1.434-.531-2.18-.637-.804-.12-1.855.282-2.41-.105-.719-.5-1.254-.047-1.84-.164-.867-.172-1.722-.422-2.754-.68-.382-.668-1.664-.937-1.66-2.258 0-.332-.633-.968-.945-.949-2.363.137-2.91-1.808-3.93-3.449-.398-3.191 1.156-5.43 4.149-6.813.39-.195.804-.335 1.234-.421 1.66-.262 3.434-.207 4.969-.79 1.687-.644 3.332-.593 5.023-.636 1.625-.04 3.543.422 4.8-.285 1.4-.79 3.145.46 4.15-1.106 1.1 1.16 2.187-.578 3.285-.02 1.175-1.007 2.636-.464 3.93-.757 1.195-.27 2.429-.426 3.577-.73a82.462 82.462 0 0 1 11.489-2.04c1.675-1.468 3.992-.074 5.793-1.37 1.546-1.114 3.62-.91 5.414-1.31 2.039-.449 4.175-.792 6.273-1.136 1.957-.32 3.883-.86 5.852-1.223 2.898-.539 5.66-1.797 8.664-2.02 1.261-1.491 3.25-.202 4.758-1.34 1.265-.952 3.14-1.116 4.671-1.362 3.743-.598 7.051-2.422 10.692-3.215.863-.188 1.722-.387 2.719-.613.132.863.234 1.511.39 2.535Zm0 0"
+                class="svg-elem-1" />
+              <path
+                d="m140.535 121.477-.523.523-1.48-2.281c-.227.633-.372 1.043-.602 1.691-1.035-.125-2.434.11-3.168-.48-1.184-.961-1.961.414-2.992.047-.934-.329-2.29.109-2.97-.422-1.109-.868-2.226-.383-3.288-.653a28.366 28.366 0 0 1-3.125-1.18l-2.184.684-1.266-2.37c-.363 1.163-.48 1.546-.675 2.175-3.235-1.863-7.114-.809-10.352-2.438-.086-.37-.156-.691-.344-1.535-.289.836-.41 1.192-.55 1.606l-2.614-.688c-.058-.55-.12-1.105-.21-1.922l-.852.621-1.453-.73-.649 1.46c-.785-.554-1.574-1.112-2.508-1.769-.035-.332-.097-.886-.175-1.605l-2.48 1.242c-1.24-1.789-3.763-2.621-4.56-5.031l.786-.863c-.676-.676-.985-.489-1.703 1.03-.227.028-.453.04-.684.036-.094-.008-.18-.125-.48-.355.218-.504.464-1.067.734-1.688l-.836-2.156 2.121.773c-.215-.844-.371-1.469-.64-2.527l2.882 1.305-.629.77 1.97 1.003v-2.371l2.214-1.125 5.117 2.125c.778-.305 3.758.082 5.11.695l.851-.777 2.324 1.11-.652.745c.156.118.367.38.488.344 1.344-.418 2.61-1.445 4.075-.078.273.254 1.222-.211 1.859-.356 2.902-.664 5.566-.25 7.91 1.637.547-.152 1.148-.453 1.742-.441.703.015 1.82.652 2.024.406 1.054-1.266 1.605.277 2.39.285a5.238 5.238 0 0 1 2.29.426c1.37.625 2.995.758 4.535.95a87.156 87.156 0 0 1 15.199 3.3c3.851 1.203 7.777 2.2 11.476 3.805 2.492 1.082 5.203 2.09 7.164 3.851 1.77 1.598 3.868 3.008 5.246 5.281l-.699 1.098.606.7-2.625 2.484c-1.078-.328-2.203-.781-2.836-2.336-.133.89-.227 1.539-.332 2.238h-1.004c-.18-.46-.332-.867-.492-1.281l-1.203.765-1.047-.78-1.7 1.573c-.855-1.054-1.453-2-2.254-2.718-.777-.696-2.402-.024-2.769-1.813.14-.219.379-.586.746-1.156l-2.351-.121 1.16 1.305c-.895-.047-1.633.12-2.137-.153a16.58 16.58 0 0 0-3.703-1.336 22.616 22.616 0 0 0-3.617-.597c-1.09-.118-2.149-.536-3.239-.66-1.152-.13-2.355.074-3.484-.145-1-.192-1.93-.758-2.883-1.152Zm0 0"
+                class="svg-elem-2" />
+              <path
+                d="M118.484 33.559v-2.965c1.204-1.27 2.594-1.883 4.692-1.68.195.328.558.93.98 1.64 2.332-1.437 3.219 1.68 5.051 1.184 2.629 1.742 4.594 4.172 7.29 5.692.374.28.714.61 1.003.98a54.396 54.396 0 0 0 7.613 6.262 47.133 47.133 0 0 1 5.2 4.465 28.157 28.157 0 0 0 5.898 4.48c.379.281.715.61 1.008.98 1.336 1.31 2.543 2.805 4.054 3.864 1.215.852 2.114 1.988 3.192 2.941 1.863 1.649 3.414 3.653 5.078 5.524 1.672 1.886 3.394 3.734 4.95 5.715.648.824.91 1.953 1.362 2.984l-3.265 2.863c-1 .567-1.5-1.308-2.68-1.742l-.969.746-4.597-.949c-3.899-3.188-8.438-6.578-12.676-10.375-2.07-1.86-4.32-3.5-6.723-4.898-1.734-1.008-3.093-2.672-4.668-3.993-4.168-3.504-8.355-7.097-11.879-11.218-3.308-3.868-7.359-7.157-9.914-12.5Zm0 0"
+                class="svg-elem-3" />
+            </svg>
+            <h2 class="sub-title about__title">О нас</h2>
+          </div>
           <div class="about__top-box">
             <p>
-              Центр иностранных языков осуществляет свою деятельность с <b>2012</b> года, зарекомендовав себя как надежный партнер в сфере лингвистического образования. За эти годы, благодаря команде опытных и квалифицированных преподавателей, центр помог тысячам студентов и профессионалов достичь своих языковых целей.
+              Центр иностранных языков осуществляет свою деятельность с <b>2012</b> года, зарекомендовав себя как
+              надежный
+              партнер в сфере лингвистического образования. За эти годы, благодаря команде опытных и квалифицированных
+              преподавателей, центр помог тысячам студентов и профессионалов достичь своих языковых целей.
             </p>
             <p>
-              <b>Наша цель</b> – не просто научить говорить на иностранном языке, а открыть двери в новый мир возможностей, где язык становится инструментом для самореализации и достижения успеха.
+              <b>Наша цель</b> – не просто научить говорить на иностранном языке, а открыть двери в новый мир
+              возможностей, где язык становится инструментом для самореализации и достижения успеха.
             </p>
           </div>
-          
         </div>
       </div>
+    </div>
 
-      <div class="container-sec">
+    <div class="container-sec">
+      <div class="about__bottom">
+        <div class="about__item star">
+          <h3 class="about__item-title one">
+            Наша миссия
+          </h3>
+          <ul class="about__item-ul">
+            <li class="about__item-li">
+              Предоставить высококачественное обучение, которое выходит за рамки стандартных учебных программ.
+            </li>
+            <li class="about__item-li">
+              Мы стремимся не только к передаче знаний, но и к развитию коммуникативных навыков, необходимых для
+              успешного взаимодействия в глобальном мире.
+            </li>
+          </ul>
+        </div>
 
-      
-        <div class="about__bottom">
-          <div class="about__item">
-            <h3 class="about__item-title one">
-              Наша миссия
-            </h3>
-            <ul class="about__item-ul">
-              <li class="about__item-li">
-                Предоставить высококачественное обучение, которое выходит за рамки стандартных учебных программ. 
-              </li>
-              <li class="about__item-li">
-                 Мы стремимся не только к передаче знаний, но и к развитию коммуникативных навыков, необходимых для успешного взаимодействия в глобальном мире.
-              </li>
-            </ul>
-          </div>
-          
-          <div class="about__item">
-            <h3 class="about__item-title two">
-              Центр предлагает
-            </h3>
-            <ul class="about__item-ul">
-              <li class="about__item-li">
-                Широкий спектр курсов, адаптированных к различным уровням владения языком и потребностям учащихся.
-              </li>
-              <li class="about__item-li">
-                От начинающих до продвинутых, от общего курса до специализированных программ, наши курсы разработаны с учетом современных методик преподавания и последних тенденций в языкознании.
-              </li>
-            </ul>
-          </div>
+        <div class="about__item">
+          <h3 class="about__item-title two">
+            Центр предлагает
+          </h3>
+          <ul class="about__item-ul">
+            <li class="about__item-li">
+              Широкий спектр курсов, адаптированных к различным уровням владения языком и потребностям учащихся.
+            </li>
+            <li class="about__item-li">
+              От начинающих до продвинутых, от общего курса до специализированных программ, наши курсы разработаны с
+              учетом современных методик преподавания и последних тенденций в языкознании.
+            </li>
+          </ul>
+        </div>
 
-          <div class="about__item">
-            <h3 class="about__item-title three">
-              Мы гордимся 
-            </h3>
-            <ul class="about__item-ul">
-              <li class="about__item-li">
-                Cвоим индивидуальным подходом к каждому студенту. Наши преподаватели внимательно отслеживают прогресс каждого учащегося и предоставляют персонализированную обратную связь, чтобы помочь им достичь максимальных результатов.
-              </li>
-              <li class="about__item-li">
-                 Мы активно используем современные технологии в обучении, чтобы сделать процесс обучения интерактивным и увлекательным.
-              </li>
-            </ul>
-          </div>
-        </div> 
-        
+        <div class="about__item">
+          <h3 class="about__item-title three">
+            Мы гордимся
+          </h3>
+          <ul class="about__item-ul">
+            <li class="about__item-li">
+              Cвоим индивидуальным подходом к каждому студенту. Наши преподаватели внимательно отслеживают прогресс
+              каждого учащегося и предоставляют персонализированную обратную связь, чтобы помочь им достичь максимальных
+              результатов.
+            </li>
+            <li class="about__item-li">
+              Мы активно используем современные технологии в обучении, чтобы сделать процесс обучения интерактивным и
+              увлекательным.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
    <section class="section program">
-    <!-- <div class="container"> -->
-      <div class="program__inner">
-        <h2 class="sub-title">Наши программы</h2>
-        <div class="program__container">
-          <div class="program__item-wrapper">
-              <div class="program__item green">
-              <!-- <div class="program__img">
-                <img src="images/junior.svg" alt="">
-              </div> -->
-              <div class="program__box">
-
-              
-              <p class="program__item-title">Для начинающих</p>
-              <p class="program__item-text">
-                Курсы английского с нуля — преодолеваем языковой барьер. Он
-                подойдет тем, кто никогда не учил язык, не знает азов грамматики и
-                не может составить на английском даже самое простое предложение.
-              </p>
-            </div>
-              </div>
+    <div class="program__inner">
+      <div class="container">
+        <h2 class="sub-title program__title">Наши программы</h2>
+      </div>
+      <div class="program__container">
+        <div class="program__item green">
+          <div class="program__box">
+            <p class="program__item-for">Младшая школа</p>
+            <p class="program__item-title">Starters</p>
+            <p class="program__item-text">
+              Курс позволяет заложить прочный фундамент знаний английского языка для детей младшего школьного возраста.
+              Программа разработана с учетом возрастных особенностей восприятия и познавательных способностей детей.
+            </p>
           </div>
-          
-          <div class="program__item-wrapper ">
-            <div class="program__item yellow">
-              <!-- <div class="program__img">
-                <img src="images/middle.svg" alt="" align-self="center">
-              </div> -->
-              <div class="program__box">
-              <p class="program__item-title">Для взрослых</p>
-              <p class="program__item-text">
-                Хотите научиться говорить на английском языке? У нас вы можете
-                пройти курсы английского языка для взрослых. Наши опытные
-                преподаватели помогут вам освоить основы языка и совершенствовать
-                свои навыки.
-              </p>
-            </div>
-            </div>
+          <div class="program__box-bottom">
+            <span>
+              <p class="program__item-subtitle">Возраст</p>
+              <p>6-9 лет</p>
+            </span>
+            <span>
+              <p class="program__item-subtitle">Продолжительность</p>
+              <p>2.5 года</p>
+            </span>
           </div>
+        </div>
 
-          <div class="program__item-wrapper ">
-            <div class="program__item orange">
-              <!-- <div class="program__img">
-                <img src="images/senior.svg" alt="">
-              </div> -->
-              <div class="program__box">
-              <p class="program__item-title">Для продвинутых</p>
-              <p class="program__item-text">
-                По окончании этого уровня вы сможете свободно и бегло говорить
-                практически на любую тему. Получаемые навыки: свободное владение
-                разговорным языком в разных ситуациях, большой словарный запас,
-                полное знание грамматики.
-              </p>
-            </div>
-            </div>
+        <div class="program__item yellow">
+          <div class="program__box">
+            <p class="program__item-for">Средняя школа</p>
+            <p class="program__item-title">Movers</p>
+            <p class="program__item-text">
+              Курс разработан для детей с целью продолжения изучения английского языка. Программа курса сочетает в себе
+              увлекательные занятия и эффективные методики обучения, позволяющие детям усвоить новые знания.
+            </p>
           </div>
+          <div class="program__box-bottom">
+            <span>
+              <p class="program__item-subtitle">Возраст</p>
+              <p>10-12 лет</p>
+            </span>
+            <span>
+              <p class="program__item-subtitle">Продолжительность</p>
+              <p>2.5 года</p>
+            </span>
+          </div>
+        </div>
 
-          <div class="program__item-wrapper">
-            <div class="program__item pink">
-              <!-- <div class="program__img">
-                <img src="images/senior.svg" alt="">
-              </div> -->
-              <div class="program__box">
-              <p class="program__item-title">Для продвинутых</p>
-              <p class="program__item-text">
-                По окончании этого уровня вы сможете свободно и бегло говорить
-                практически на любую тему. Получаемые навыки: свободное владение
-                разговорным языком в разных ситуациях, большой словарный запас,
-                полное знание грамматики.
-              </p>
-            </div>
-            </div>
+        <div class="program__item orange">
+          <div class="program__box">
+            <p class="program__item-for">Старшая школа</p>
+            <p class="program__item-title">Starter - Intermediate</p>
+            <p class="program__item-text">
+              Курс рассчитан на подростковый возраст. Наша методика обучения сочетает в себе академический подход и
+              интерактивные элементы, позволяющие максимально вовлечь учеников в процесс обучения.
+            </p>
+          </div>
+          <div class="program__box-bottom">
+            <span>
+              <p class="program__item-subtitle">Возраст</p>
+              <p>12-17 лет</p>
+            </span>
+            <span>
+              <p class="program__item-subtitle">Продолжительность</p>
+              <p>70-119 часов</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="program__item pink">
+          <div class="program__box">
+            <p class="program__item-for">Для взрослых</p>
+            <p class="program__item-title">Elementary - Intermediate</p>
+            <p class="program__item-text">
+              Курс разработан специально для взрослых и позволит построить прочный фундамент грамматики и лексики, и
+              развить навыки общения в различных ситуациях. Вы сможете постепенно и систематически улучшать свои знания
+              английского языка.
+            </p>
+          </div>
+          <div class="program__box-bottom">
+            <span>
+              <p class="program__item-subtitle">Возраст</p>
+              <p>от 17 лет и старше</p>
+            </span>
+            <span>
+              <p class="program__item-subtitle">Продолжительность</p>
+              <p>9 месяцев</p>
+            </span>
           </div>
         </div>
       </div>
-      <div class="program__link-box">
-        <a class="program__link btn" href="programs.html">
-          Посмотреть все программы
-        </a>
-      </div>
+    </div>
+    <div class="program__link-box">
+      <a class="program__link btn" href="programs.html">
+        Узнать подробнее
+      </a>
     </div>
   </section> 
 
-
-
-   <section class="section gallery">
-    <div class="container">
-      <h2 class="sub-title">Фотогалерея</h2>
+  <section class="section gallery">
+    <div class="container-sec">
+      <div class="gallery__box">
+        <h2 class="sub-title gallery__title">Фотогалерея</h2>
+        <a class="gallery__btn btn" href="photos.html">Посмотреть ещё</a>
+      </div>
       <div class="gallery__inner">
         <div class="gallery__slider swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="gallery__item">
-                <img src="images/gallery/1.webp" alt="">
+                <img src="images/photos/1.jpg" alt="Фото">
               </div>
             </div>
             <div class="swiper-slide">
               <div class="gallery__item">
-                <img src="images/gallery/2.webp" alt="">
+                <img src="images/photos/2.jpg" alt="Фото">
               </div>
             </div>
             <div class="swiper-slide">
               <div class="gallery__item">
-                <img src="images/gallery/3.webp" alt="">
-              </div> 
+                <img src="images/photos/3.jpg" alt="Фото">
+              </div>
             </div>
             <div class="swiper-slide">
               <div class="gallery__item">
-                <img src="images/gallery/4.webp" alt="">
-              </div> 
+                <img src="images/photos/4.jpg" alt="Фото">
+              </div>
             </div>
             <div class="swiper-slide">
               <div class="gallery__item">
-                <img src="images/gallery/5.jpg" alt="">
-              </div> 
-            </div>
-            <div class="swiper-slide">
-              <div class="gallery__item">
-                <img src="images/gallery/6.jpg" alt="">
-              </div> 
+                <img src="images/photos/5.jpg" alt="Фото">
+              </div>
             </div>
           </div>
-        
+
           <div class="swiper-button-prev gallery__arrow">
             <img src="images/left.svg" alt="arrow">
           </div>
@@ -274,9 +292,55 @@
             <img src="images/right.svg" alt="arrow">
           </div>
         </div>
-        <a class="teacher__btn btn" href="photos.html"
-        >Посмотреть ещё</a
-      >
+      </div>
+    </div>
+  </section>
+
+  <section class="section sert">
+    <div class="container">
+      <h2 class="sub-title sert__title">Сертификаты и дипломы</h2>
+    </div>
+    <div class="container-sec">
+      <div class="sert__inner">
+        <div class="sert__container-g">
+          <div class="sert__item">
+            <img src="images/sert/1.jpg" alt="Сертификат">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/2.jpg" alt="Сертификат" style="object-position: center left">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/3.jpg" alt="Сертификат">
+          </div>
+
+        </div>
+        <div class="sert__container-v">
+          <div class="sert__item">
+            <img src="images/sert/4.jpg" alt="Сертификат">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/5.jpg" alt="Сертификат">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/6.jpg" alt="Сертификат">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/7.jpg" alt="Сертификат">
+          </div>
+        </div>
+
+        <div class="sert__container-g">
+          <div class="sert__item">
+            <img src="images/sert/8.jpg" alt="Сертификат">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/9.jpg" alt="Сертификат">
+          </div>
+          <div class="sert__item">
+            <img src="images/sert/10.jpg" alt="Сертификат">
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -290,78 +354,38 @@
             <span class="contact__span"> Приходите: </span>
             <ul class="contact__adress-ul">
               <li class="contact__adress-li">г. Луганск, ул. Клубная, 55</li>
-              <li class="contact__adress-li">г. Луганск, ул. Кирова 5</li>
+              <li class="contact__adress-li">г. Луганск, ул. Кирова, 5/8а</li>
               <li class="contact__adress-li">
                 г. Луганск, квартал Гагарина, 2
               </li>
               <li class="contact__adress-li">г. Луганск, ул.Советская, 62</li>
               <li class="contact__adress-li">
-                <a
-                  class="contact__link"
-                  href="https://vk.com/internetcafeonline"
-                  rel="noopener noreferrer"
-                  >Интернет-кафе "ONLINE" г. Луганск
+                <a class="contact__link" href="https://vk.com/internetcafeonline"
+                  rel="noopener noreferrer">Интернет-кафе "ONLINE" г. Луганск
                 </a>
               </li>
             </ul>
 
             <span class="contact__span"> Позвоните: </span>
-            <a
-              class="contact__tel"
-              href="tel:+79591429878"
-              rel="noopener noreferrer"
-            >
+            <a class="contact__tel" href="tel:+79591429878" rel="noopener noreferrer">
               <span>+7&nbsp;(959)&nbsp;142-98-78</span>
             </a>
 
             <span class="contact__span"> Напишите: </span>
-            <a
-              class="contact__link contact__vk"
-              href="https://vk.com/yeslpr"
-              rel="noopener noreferrer"
-              >Мы ВКонтакте</a
-            >
+            <a class="contact__link contact__vk" href="https://vk.com/yeslpr" rel="noopener noreferrer">Мы ВКонтакте</a>
           </div>
           <div class="contact__map">
-            <div style="position: relative; overflow: hidden">
-              <a
-                href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
-                style="
-                  color: #eee;
-                  font-size: 12px;
-                  position: absolute;
-                  top: 0px;
-                "
-                >Яндекс Карты</a
-              >
-              <a
-                href="https://yandex.ru/maps/222/luhansk/house/ulitsa_kirova_5/Z0AYdA9oSUYCQFpifXl2eXhjbQ==/?ll=39.288099%2C48.578476&utm_medium=mapframe&utm_source=maps&z=17.89"
-                style="
-                  color: #eee;
-                  font-size: 12px;
-                  position: absolute;
-                  top: 14px;
-                "
-                >Яндекс Карты — транспорт, навигация, поиск мест</a
-              >
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=39.288099%2C48.578476&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDUyNTA5MzA1EjrQoNC-0YHRltGPLCDQm9GD0LPQsNC90YHRjNC6LCDQstGD0LvQuNGG0Y8g0JrRltGA0L7QstCwLCA1IgoN8iYdQhVKUEJC&z=17.89"
-                width="700"
-                height="500"
-                frameborder="1"
-                border-color="green"
-                allowfullscreen="true"
-                style="position: relative"
-              ></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af1da83fea2fe99fd2e85f7758295acd62414c0050e4b8be4ce15ab34afcfae92&amp;source=constructor" width="700" height="500" frameborder="0"></iframe>
+            <div class="contact__img-box">
+              <img class="contact__img" src="images/map.jpg" alt="Карта">
             </div>
           </div>
         </div>
       </div>
     </div>
   </section> 
-  
-</main>
 
+</main>
 
 <button class="btn-up btn-up_hide">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1">
@@ -372,74 +396,48 @@
 </button>
 <footer class="footer">
   <div class="container">
-    <div class="footer__top header__top-inner">
+    <div class="footer__top">
       <a class="logo" href="index.html">
         <img class="header__logo" src="images/logo.jpg" alt="Логотип" />
       </a>
-      <nav class="menu">
-        <button class="menu__btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="18"
-            viewBox="0 0 30 18"
-            fill="none"
-          >
-            <path d="M0 0H30V2H0V0Z" fill="black"></path>
-            <path d="M0 8H30V10H0V8Z" fill="black"></path>
-            <rect y="16" width="30" height="2" fill="black"></rect>
-          </svg>
-        </button>
-        <ul class="menu__list">
-          <li class="menu__list-li">
-            <a class="menu__list-a" href="index.html"> Главная </a>
+      <nav class="footer__menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-li">
+            <a class="footer__menu-a" href="index.html"> Главная </a>
           </li>
-          <li class="menu__list-li">
-            <a class="menu__list-a" href="programs.html"> Программы </a>
+          <li class="footer__menu-li">
+            <a class="footer__menu-a" href="programs.html"> Программы </a>
           </li>
-          <li class="menu__list-li">
-            <a class="menu__list-a" href="teachers.html"> Преподаватели </a>
-          </li>
-          <li class="menu__list-li">
-            <a class="menu__list-a" href="services.html"> Услуги </a>
-          </li>
-          <li class="menu__list-li">
-            <a class="menu__list-a" href="photos.html"> Галерея </a>
+          <li class="footer__menu-li">
+            <a class="footer__menu-a" href="photos.html"> Галерея </a>
           </li>
         </ul>
       </nav>
-      <a
-        class="header__tel"
-        href="tel:+79591429878"
-        rel="noopener noreferrer"
-      >
-      <span class="header__tel-span">+7&nbsp;(959)&nbsp;142-98-78</span>
-    </a>
-  </div>
+      <a class="header__tel" href="tel:+79591429878" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+            <path
+              d="M3.75 6.875c0 10.7 8.676 19.375 19.375 19.375.484 0 .96-.02 1.434-.05.546-.044.816-.063 1.066-.204.203-.117.398-.328.5-.543.125-.254.125-.555.125-1.156v-3.52c0-.507 0-.757-.082-.976a1.287 1.287 0 00-.348-.492c-.175-.153-.414-.239-.886-.414l-4.008-1.458c-.551-.199-.828-.3-1.09-.28-.23.011-.453.093-.64.226-.216.152-.368.402-.669.906L17.5 20a15.126 15.126 0 01-7.5-7.5l1.71-1.027c.505-.301.755-.453.907-.668.133-.188.215-.41.227-.64.02-.263-.082-.54-.281-1.09l-1.458-4.009c-.175-.472-.261-.71-.414-.886a1.287 1.287 0 00-.492-.348c-.219-.082-.469-.082-.976-.082h-3.52c-.601 0-.902 0-1.156.125a1.316 1.316 0 00-.543.5c-.14.25-.16.52-.203 1.066-.031.473-.051.95-.051 1.434zm0 0"
+              fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="header__tel-span">+7&nbsp;(959)&nbsp;142-98-78</span>
+        </a>
+  </div> 
   <div class="footer__bottom">
-      <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+      <a class="footer__bottom-link" href="/pdf/policy.pdf" target="_blank">Политика обработки персональных данных</a>
     <div class="footer__bottom-box">
-      <span>ИП Иванов Иван Иванович</span>
-      <span>ИНН 000000000000</span>
-      <span>ОГРН 000000000000000</span>
+      <span>ИП Фурса Елена Сергеевна</span>
+      <span>ИНН 940200100404</span>
+      <span>ОГРНИП 323940100011386 от 09.01.23.</span>
     </div>
     <ul class="footer__bottom-list">
       <li class="footer__bottom-li">
         <a class="footer__bottom-a" href="https://vk.com/yeslpr" >
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1">
-            <g id="surface1">
-            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 25 1 C 11.746094 1 1 11.746094 1 25 C 1 38.253906 11.746094 49 25 49 C 38.253906 49 49 38.253906 49 25 C 49 11.746094 38.253906 1 25 1 Z M 34.230469 28.078125 C 34.230469 28.078125 36.351562 30.171875 36.875 31.144531 C 36.890625 31.164062 36.898438 31.183594 36.902344 31.195312 C 37.113281 31.550781 37.164062 31.828125 37.058594 32.039062 C 36.886719 32.382812 36.285156 32.550781 36.078125 32.566406 L 32.328125 32.566406 C 32.070312 32.566406 31.523438 32.5 30.863281 32.046875 C 30.359375 31.691406 29.859375 31.109375 29.371094 30.539062 C 28.640625 29.695312 28.011719 28.964844 27.378906 28.964844 C 26.660156 29.15625 26.046875 29.84375 26.046875 31.667969 C 26.046875 32.238281 25.59375 32.566406 25.277344 32.566406 L 23.558594 32.566406 C 22.976562 32.566406 19.925781 32.359375 17.226562 29.511719 C 13.921875 26.023438 10.949219 19.03125 10.921875 18.964844 C 10.734375 18.511719 11.121094 18.269531 11.546875 18.269531 L 15.332031 18.269531 C 15.835938 18.269531 16.003906 18.578125 16.117188 18.851562 C 16.253906 19.167969 16.746094 20.429688 17.558594 21.851562 C 18.878906 24.164062 19.683594 25.105469 20.332031 25.105469 C 21.523438 24.546875 21.367188 21.53125 21.328125 20.90625 C 21.328125 20.789062 21.328125 19.558594 20.894531 18.96875 C 20.585938 18.542969 20.058594 18.378906 19.738281 18.320312 C 19.867188 18.140625 20.039062 17.996094 20.234375 17.898438 C 20.816406 17.609375 21.859375 17.566406 22.898438 17.566406 L 23.476562 17.566406 C 24.601562 17.578125 24.890625 17.652344 25.296875 17.753906 C 26.121094 17.953125 26.140625 18.484375 26.066406 20.308594 C 26.046875 20.824219 26.023438 21.410156 26.023438 22.101562 C 26.023438 22.25 26.015625 22.410156 26.015625 22.578125 C 25.988281 23.507812 25.960938 24.558594 26.613281 24.992188 C 27.128906 25.074219 27.8125 25.074219 29.667969 21.890625 C 30.238281 20.867188 30.738281 19.804688 31.15625 18.707031 C 31.191406 18.640625 31.300781 18.441406 31.433594 18.363281 L 36.195312 18.292969 C 36.679688 18.292969 37.011719 18.363281 37.074219 18.550781 C 37.183594 18.851562 37.054688 19.757812 35.023438 22.511719 L 34.113281 23.707031 C 32.273438 26.121094 32.273438 26.246094 34.230469 28.078125 Z M 34.230469 28.078125 "/>
-            </g>
-            </svg>          
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M25 1C11.746 1 1 11.746 1 25s10.746 24 24 24 24-10.746 24-24S38.254 1 25 1Zm9.23 27.078s2.122 2.094 2.645 3.067c.016.02.023.039.027.05.211.356.262.633.157.844-.172.344-.774.512-.98.527h-3.75c-.259 0-.806-.066-1.466-.52-.504-.355-1.004-.937-1.492-1.507-.73-.844-1.36-1.574-1.992-1.574-.719.191-1.332.879-1.332 2.703 0 .57-.453.898-.77.898H23.56c-.582 0-3.633-.207-6.332-3.054-3.305-3.489-6.278-10.48-6.305-10.547-.188-.453.2-.695.625-.695h3.785c.504 0 .672.308.785.582.137.316.63 1.578 1.442 3 1.32 2.312 2.125 3.253 2.773 3.253 1.191-.558 1.035-3.574.996-4.199 0-.117 0-1.347-.433-1.937-.31-.426-.836-.59-1.157-.649.13-.18.301-.324.496-.422.582-.289 1.625-.332 2.664-.332h.579c1.125.012 1.414.086 1.82.188.824.2.844.73.77 2.555-.02.515-.044 1.101-.044 1.793 0 .148-.007.308-.007.476-.028.93-.055 1.98.597 2.414.516.082 1.2.082 3.055-3.101a24.328 24.328 0 0 0 1.488-3.184c.035-.066.145-.266.278-.344l4.761-.07c.485 0 .817.07.88.258.109.3-.02 1.207-2.052 3.96l-.91 1.196c-1.84 2.414-1.84 2.54.117 4.371Zm0 0"/></svg>         
         </a>
       </li>
       <li class="footer__bottom-li">
         <a class="footer__bottom-a" href="https://t.me/Elena_Fursa" >
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1">
-          <g id="surface1">
-          <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 34.566406 15.6875 C 34.574219 15.6875 34.585938 15.6875 34.601562 15.6875 C 34.925781 15.6875 35.230469 15.789062 35.476562 15.964844 L 35.472656 15.960938 C 35.65625 16.117188 35.777344 16.339844 35.804688 16.589844 L 35.804688 16.59375 C 35.835938 16.785156 35.855469 17.003906 35.855469 17.226562 C 35.855469 17.328125 35.851562 17.429688 35.84375 17.53125 L 35.84375 17.515625 C 35.492188 21.21875 33.96875 30.195312 33.191406 34.335938 C 32.863281 36.09375 32.21875 36.679688 31.59375 36.734375 C 30.234375 36.863281 29.203125 35.839844 27.890625 34.976562 C 25.828125 33.625 24.664062 32.785156 22.667969 31.46875 C 20.355469 29.945312 21.855469 29.109375 23.171875 27.742188 C 23.515625 27.382812 29.5 21.9375 29.617188 21.445312 C 29.625 21.414062 29.628906 21.382812 29.628906 21.347656 C 29.628906 21.226562 29.582031 21.113281 29.507812 21.03125 C 29.429688 20.976562 29.328125 20.945312 29.21875 20.945312 C 29.148438 20.945312 29.082031 20.960938 29.019531 20.984375 L 29.023438 20.984375 C 28.816406 21.03125 25.527344 23.203125 19.15625 27.503906 C 18.460938 28.054688 17.582031 28.398438 16.625 28.441406 L 16.617188 28.441406 C 15.261719 28.277344 14.03125 27.976562 12.863281 27.546875 L 12.980469 27.582031 C 11.515625 27.105469 10.351562 26.851562 10.449219 26.042969 C 10.503906 25.621094 11.082031 25.191406 12.191406 24.75 C 19.011719 21.78125 23.558594 19.820312 25.835938 18.875 C 28.347656 17.542969 31.257812 16.445312 34.320312 15.734375 L 34.5625 15.6875 Z M 24.890625 1.601562 C 11.917969 1.632812 1.414062 12.15625 1.414062 25.132812 C 1.414062 38.128906 11.949219 48.664062 24.945312 48.664062 C 37.941406 48.664062 48.476562 38.128906 48.476562 25.132812 C 48.476562 12.15625 37.972656 1.632812 25.003906 1.601562 L 25 1.601562 C 24.964844 1.601562 24.925781 1.601562 24.890625 1.601562 Z M 24.890625 1.601562 "/>
-          </g>
-          </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M34.566 15.688h.036c.324 0 .628.101.875.277l-.004-.004a.96.96 0 0 1 .332.629v.004a3.994 3.994 0 0 1 .039.937v-.015c-.352 3.703-1.875 12.68-2.653 16.82-.328 1.758-.972 2.344-1.597 2.398-1.36.13-2.39-.894-3.703-1.757-2.063-1.352-3.227-2.192-5.223-3.508-2.313-1.524-.813-2.36.504-3.727.344-.36 6.328-5.805 6.445-6.297a.475.475 0 0 0-.11-.414.505.505 0 0 0-.288-.086.565.565 0 0 0-.2.04h.004c-.207.046-3.496 2.218-9.867 6.519a4.388 4.388 0 0 1-2.531.937h-.008a16.493 16.493 0 0 1-3.754-.894l.117.035c-1.464-.477-2.628-.73-2.53-1.539.054-.422.632-.852 1.741-1.293 6.82-2.969 11.368-4.93 13.645-5.875 2.512-1.332 5.422-2.43 8.484-3.14l.242-.047ZM24.891 1.601c-12.973.03-23.477 10.554-23.477 23.53 0 12.997 10.535 23.532 23.531 23.532 12.996 0 23.532-10.535 23.532-23.531 0-12.977-10.504-23.5-23.473-23.531h-.114Zm0 0"/></svg>
         </a>
       </li>
     </ul>

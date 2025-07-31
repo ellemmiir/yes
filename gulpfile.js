@@ -107,22 +107,30 @@ function styles () {
 
 
 function scripts () {
-    return src(path.src.js, {base: srcPath + 'js/'})
-    .pipe(plumber({
-      errorHandler : function (err) {
-        notify.onError({
-          title: "JS Error",
-          message: "Error <%- error.message %>"
-        })(err);
-        this.emit('end');
-      }
-    }))
-    .pipe(concat('main.js'))
-    .pipe(dest(path.build.js)) 
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(dest(path.build.js)) 
-    .pipe(browserSync.stream())
+ return src(
+   [
+     "node_modules/jquery/dist/jquery.js",
+     path.src.js,
+   ],
+   { base: srcPath + "js/" }
+ )
+   .pipe(
+     plumber({
+       errorHandler: function (err) {
+         notify.onError({
+           title: "JS Error",
+           message: "Error <%- error.message %>",
+         })(err);
+         this.emit("end");
+       },
+     })
+   )
+   .pipe(concat("main.js"))
+   .pipe(dest(path.build.js))
+   .pipe(concat("main.min.js"))
+   .pipe(uglify())
+   .pipe(dest(path.build.js))
+   .pipe(browserSync.stream());
 }
 
 
