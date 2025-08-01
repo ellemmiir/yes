@@ -347,6 +347,17 @@ $maxWidth: 1200;
     }
   }
 
+  .sert {
+    &__container-g,
+    &__container-v  {
+      gap: 10px;
+    }
+    &__item img{
+      border-radius: 10px;
+    }
+  }
+
+  
 
   .contact{
     &__adress-ul{

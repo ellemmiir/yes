@@ -1520,6 +1520,14 @@ button {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .sert__container-g, .sert__container-v {
+        gap: 10px;
+    }
+
+    .sert__item img {
+        border-radius: 10px;
+    }
+
     .contact__adress-ul {
         margin-bottom: 20px;
         font-size: 18px;
