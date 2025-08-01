@@ -792,6 +792,11 @@ $darkgrey: #a7a7a7;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    a{
+      display: block;
+      object-fit: contain;
+      height: 100%;
+    }
   }
   &__item img{
     display: block;

@@ -84,7 +84,11 @@ function pages () {
 
 function styles () {
     return src(
-      [path.src.css, "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css"],
+      [
+        path.src.css,
+        "node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+        "node_modules/locomotive-scroll/dist/locomotive-scroll.css",
+      ],
       {
         base: srcPath + "scss/",
       }
@@ -118,6 +122,7 @@ function scripts () {
    [
      "node_modules/jquery/dist/jquery.js",
      "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+     "node_modules/locomotive-scroll/dist/locomotive-scroll.js",
      path.src.js,
    ],
    { base: srcPath + "js/" }
