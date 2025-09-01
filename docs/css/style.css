@@ -73,7 +73,9 @@
 
 .header__bottom-title {
     margin-bottom: 30px;
-    font-size: 60px;
+    color: #68a62f;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 52px;
     line-height: 1.4;
 }
 
@@ -850,6 +852,55 @@
     border-radius: 20px;
 }
 
+.docs {
+    background-color: #f3f3f3;
+}
+
+.docs__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+.docs__link {
+    position: relative;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.docs__link a {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.docs__item {
+    display: flex;
+    padding: 50px 30px;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.docs__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+    border-radius: 20px;
+}
+
 .contact__wrapper {
     display: flex;
     justify-content: space-between;
@@ -945,15 +996,15 @@
 }
 
 .footer {
-    background-color: #f3f3f3;
+    background-color: rgb(224, 224, 224);
 }
 
 .footer__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #d8d7d7;
+    padding: 20px 0;
+    border-bottom: 1px solid #c2c1c1;
 }
 
 .footer__menu-list {
@@ -1139,12 +1190,12 @@ button {
     font-weight: 600;
 }
 
-.header__bottom-title, .about__item-title, .program__item-title, .program__box-bottom, .programs__tab-btn.programs-active, .programs-a__tab-btn.active, .programs-a__tab-label, .programs-a__tab-value, .programs-a__tab-name, .contact__adress-ul, a {
+.about__item-title, .program__item-title, .program__box-bottom, .programs__tab-btn.programs-active, .programs-a__tab-btn.active, .programs-a__tab-label, .programs-a__tab-value, .programs-a__tab-name, .contact__adress-ul, a {
     font-family: "Montserrat-SemiBold", sans-serif;
     font-weight: 600;
 }
 
-.sub-title {
+.header__bottom-title, .sub-title {
     font-family: "Montserrat-Bold", sans-serif;
     font-weight: 700;
 }
@@ -1319,7 +1370,21 @@ button {
         justify-content: left;
         width: 100%;
     }
+}
 
+@media (max-width: 1200px) and (max-width: 767px) {
+    .docs__link a {
+        font-size: calc(16px + 6.8 * (100vw - 320px) / 1200);
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 767px) {
+    .docs__link a {
+        font-size: calc(16px + 4 * 100vw / 1200);
+    }
+}
+
+@media (max-width: 1200px) {
     .photos,
   .programs {
         margin-top: 30px;
@@ -1593,6 +1658,32 @@ button {
 
     .contact__span {
         margin-bottom: 10px;
+    }
+
+    .docs__container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+    .docs__link a {
+        font-size: calc(16px + 6.8 * (100vw - 320px) / 1200);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 767px) {
+    .docs__link a {
+        font-size: calc(16px + 4 * 100vw / 1200);
+    }
+}
+
+@media (max-width: 767px) {
+    .docs__item {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 500px;
     }
 
     .footer__menu-a:hover:after {

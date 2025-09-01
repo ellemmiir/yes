@@ -14047,7 +14047,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!galleryContainer || !loadMoreBtn) return;
 
     const photoSources = Array.from(
-      { length: 21 },
+      { length: 19 },
       (_, i) => `images/photos/${i + 1}.jpg`
     );
     const photosPerPage = 9;

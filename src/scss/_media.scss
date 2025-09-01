@@ -139,6 +139,14 @@ $maxWidth: 1200;
     }
   }
 
+  .docs{
+    &__link{
+      a{
+        @include adaptiv-font(20, 16);
+      }
+    }
+  }
+
 
   .photos,
   .programs{
@@ -357,7 +365,6 @@ $maxWidth: 1200;
     }
   }
 
-  
 
   .contact{
     &__adress-ul{
@@ -416,6 +423,28 @@ $maxWidth: 1200;
     }
     &__span{
       margin-bottom: 10px;
+    }
+  }
+
+  .docs{
+    &__container{
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+    &__link{
+      a{
+        @include adaptiv-font(20, 16);
+      }
+    }
+    &__item{
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      height: 500px;
+    }
+    &__item:nth-child(3) {
+
     }
   }
 
